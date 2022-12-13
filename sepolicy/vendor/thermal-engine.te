@@ -1,7 +1,9 @@
+allow thermal-engine self:capability sys_admin;
 allow thermal-engine thermal_data_file:dir rw_dir_perms;
 allow thermal-engine thermal_data_file:file create_file_perms;
 allow thermal-engine sysfs:dir r_dir_perms;
 allow thermal-engine self:capability { chown fowner };
+allow thermal-engine system_prop:file { read };
 
 set_prop(thermal-engine, vendor_thermal_prop);
 r_dir_file(thermal-engine, sysfs_thermal)

@@ -1,0 +1,2 @@
+allow boringssl_self_test self:capability sys_admin;
+allow vendor_boringssl_self_test self:capability sys_admin;
